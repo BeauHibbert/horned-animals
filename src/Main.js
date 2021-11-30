@@ -1,12 +1,14 @@
 import {Component} from 'react';
 import HornedBeast from './HornedBeast.js';
+import Goat from './images/goat.jpeg';
+import WeirdGoat from './images/weirdGoat.jpeg';
 
 class Main extends Component {
   render() {
     return(
       <>
-        <HornedBeast title="Beast1" imageUrl="../public/logo192.png" description="Beast1 description"></HornedBeast>
-        <HornedBeast title="Beast2" imageUrl="../public/logo512.png" description="Beast2 description"></HornedBeast>
+        <HornedBeast title="Beast1" imageUrl={Goat} description="Beast1 description"></HornedBeast>
+        <HornedBeast title="Beast2" imageUrl={WeirdGoat} description="Beast2 description"></HornedBeast>
       </>
     );
   }
