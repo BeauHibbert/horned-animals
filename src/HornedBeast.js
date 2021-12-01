@@ -17,14 +17,17 @@ class HornedBeast extends Component {
   render() {
     return(
       <>
-        <h2>{this.props.title}</h2>
-        <img src={this.props.imageUrl} alt={this.props.description} title={this.props.title} onClick={this.handleClick}/>
-        <div id="heart-image-wrapper">
-          <img src={heart} alt="Red heart image" id="heart-image"/>
-          <p>{this.state.timesClicked}</p>
+        <div class="beast-wrapper">
+          <h2>{this.props.title}</h2>
+          <div id="image-heart-wrapper">
+            <img src={this.props.imageUrl} alt={this.props.description} title={this.props.title} onClick={this.handleClick} className="beast-image"/>
+            <div id="heart-image-wrapper">
+              <img src={heart} alt="Red heart image" id="heart-image"/>
+              <p>{this.state.timesClicked}</p>
+            </div>
+          </div>
+          <p>{this.props.description}</p>
         </div>
-        
-        <p>{this.props.description}</p>
       </>
     );
   }

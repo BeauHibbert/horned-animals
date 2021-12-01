@@ -37,6 +37,18 @@
   }
 } */
 
+.beast-wrapper {
+  max-width: 80%;
+}
+
+#image-heart-wrapper {
+  display: flex;
+}
+
+.beast-image {
+  width: 100%;
+}
+
 #heart-image-wrapper {
   display: flex;
   justify-content: flex-start;
@@ -46,3 +58,4 @@
   height: 50px;
   width: 50px;
 }
+
