@@ -1,15 +1,24 @@
 import {Component} from 'react';
 import HornedBeast from './HornedBeast.js';
-import Goat from './images/goat.jpeg';
-import WeirdGoat from './images/weirdGoat.jpeg';
+import data from './data.json';
+import {Container, Row, Col} from 'react-bootstrap';
 
 class Main extends Component {
   render() {
+    let newBeasts = [];
+    data.forEach(function(beast) {
+      let newBeast = <HornedBeast title={beast.title} imageUrl={beast.image_url} description={beast.description}></HornedBeast>;
+      let newBeastCol = <Col xs={12} md={6} lg={4}>{newBeast}</Col>;
+      newBeasts.push(newBeastCol);
+    }
+    );
+
     return(
-      <>
-        <HornedBeast title="Beast1" imageUrl={Goat} description="Beast1 description"></HornedBeast>
-        <HornedBeast title="Beast2" imageUrl={WeirdGoat} description="Beast2 description"></HornedBeast>
-      </>
+      <Container>
+        <Row>
+          {newBeasts}
+        </Row>
+      </Container>
     );
   }
 }

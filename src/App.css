@@ -1,8 +1,8 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +35,27 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.beast-wrapper {
+  max-width: 80%;
 }
+
+#image-heart-wrapper {
+  display: flex;
+}
+
+.beast-image {
+  width: 100%;
+}
+
+#heart-image-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#heart-image {
+  height: 50px;
+  width: 50px;
+}
+
