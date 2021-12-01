@@ -1,14 +1,18 @@
 import {Component} from 'react';
 import HornedBeast from './HornedBeast.js';
-import Goat from './images/goat.jpeg';
-import WeirdGoat from './images/weirdGoat.jpeg';
+import data from './data.json';
 
 class Main extends Component {
   render() {
+    let newBeasts = [];
+    data.forEach(function(beast) {
+      let newBeast = <HornedBeast title={beast.title} imageUrl={beast.image_url} description={beast.description}></HornedBeast>;
+      newBeasts.push(newBeast);
+    }
+    );
     return(
       <>
-        <HornedBeast title="Beast1" imageUrl={Goat} description="Beast1 description"></HornedBeast>
-        <HornedBeast title="Beast2" imageUrl={WeirdGoat} description="Beast2 description"></HornedBeast>
+        {newBeasts}
       </>
     );
   }

@@ -1,6 +1,6 @@
 Number and name of feature: feature #1 Display images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 min
 
 Start time: _____
 
