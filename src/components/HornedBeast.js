@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import heart from './images/heart.png';
+import heart from '../images/heart.png';
+import SelectedBeast from './SelectedBeast.js';
 
 class HornedBeast extends Component {
 
@@ -7,11 +8,22 @@ class HornedBeast extends Component {
     super(props);
     this.state = {
       timesClicked: 0,
+      showModal: false
     };
   }
 
   handleClick = () => {
     this.setState({timesClicked: this.state.timesClicked + 1});
+    this.setState({showModal: true});
+    console.log(this.state);
+  }
+
+  openModal = () => {
+    this.setState({showModal: true});
+  }
+
+  closeModal = () => {
+    this.setState({showModal: false});
   }
 
   render() {
@@ -28,6 +40,7 @@ class HornedBeast extends Component {
           </div>
           <p>{this.props.description}</p>
         </div>
+        <SelectedBeast close={this.closeModal} show={this.state.showModal} title={this.props.title} beastImage={this.props.imageUrl} description={this.props.description}/>
       </>
     );
   }
