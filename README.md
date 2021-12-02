@@ -1,3 +1,6 @@
+# OverView
+This is an application that displays images and information of different horned animals. This application will allow you to filter the images by number of horns and choose your favorite image.
+
 # Lab 02
 
 Number and name of feature: feature #1 Display images
