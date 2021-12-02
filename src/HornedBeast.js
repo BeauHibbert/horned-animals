@@ -17,7 +17,7 @@ class HornedBeast extends Component {
   render() {
     return(
       <>
-        <div class="beast-wrapper">
+        <div className="beast-wrapper">
           <h2>{this.props.title}</h2>
           <div id="image-heart-wrapper">
             <img src={this.props.imageUrl} alt={this.props.description} title={this.props.title} onClick={this.handleClick} className="beast-image"/>
