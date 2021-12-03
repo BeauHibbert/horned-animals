@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import './App.css';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
@@ -14,7 +14,7 @@ export default class App extends Component {
         <Footer></Footer>
       </>
     );
-  } 
+  }
 }
 
 
